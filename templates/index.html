@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a class="btn" href="{{ url_for('task_bp.create') }}">+ Nova tarefa</a>
+<ul>
+    {% for task in tasks %}
+        <li>
+            <span>{{ task.title }}</span>
+            <a class="delete" href="{{ url_for('task_bp.delete', task_id=task.id) }}">Excluir</a>
+        </li>
+    {% else %}
+        <li>Nenhuma tarefa adicionada ainda</li>
+    {% endfor %}
+</ul>
+{% endblock %}

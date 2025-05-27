@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" class="task-form">
+    <label for="title">Titulo da tarefa:</label>
+    <input type="text" name="title" placeholder="Digite o nome da tarefa" required>
+    <button type="submit">Adicionar</button>
+</form>
+{% endblock %}
